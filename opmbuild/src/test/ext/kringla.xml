@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<opm:opmGraph xmlns="http://example.com/" xmlns:opm="http://openprovenance.org/model/v1.1.a" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <opm:accounts/>
+    <opm:processes>
+        <opm:process id="NODE28"/>
+        <opm:process id="NODE17"/>
+        <opm:process id="NODE18"/>
+        <opm:process id="NODE20"/>
+        <opm:process id="NODE16"/>
+        <opm:process id="NODE22"/>
+        <opm:process id="NODE31"/>
+        <opm:process id="NODE23"/>
+        <opm:process id="NODE14"/>
+        <opm:process id="NODE11"/>
+        <opm:process id="NODE36"/>
+        <opm:process id="NODE8"/>
+        <opm:process id="NODE43"/>
+        <opm:process id="NODE7"/>
+        <opm:process id="NODE42"/>
+        <opm:process id="NODE4"/>
+    </opm:processes>
+    <opm:artifacts>
+        <opm:artifact id="NODE0"/>
+        <opm:artifact id="NODE29"/>
+        <opm:artifact id="NODE39"/>
+        <opm:artifact id="NODE19"/>
+        <opm:artifact id="NODE15"/>
+        <opm:artifact id="NODE33"/>
+        <opm:artifact id="NODE21"/>
+        <opm:artifact id="NODE34"/>
+        <opm:artifact id="NODE13"/>
+        <opm:artifact id="NODE37"/>
+        <opm:artifact id="NODE24"/>
+        <opm:artifact id="NODE38"/>
+        <opm:artifact id="NODE25"/>
+        <opm:artifact id="NODE12"/>
+        <opm:artifact id="NODE35"/>
+        <opm:artifact id="NODE27"/>
+        <opm:artifact id="NODE10"/>
+        <opm:artifact id="NODE40"/>
+        <opm:artifact id="NODE30"/>
+        <opm:artifact id="NODE9"/>
+        <opm:artifact id="NODE5"/>
+        <opm:artifact id="NODE3"/>
+        <opm:artifact id="NODE2"/>
+    </opm:artifacts>
+    <opm:agents>
+        <opm:agent id="NODE1"/>
+        <opm:agent id="NODE41"/>
+        <opm:agent id="NODE6"/>
+        <opm:agent id="NODE32"/>
+        <opm:agent id="NODE26"/>
+    </opm:agents>
+    <opm:causalDependencies>
+        <opm:wasGeneratedBy id="EDGE40">
+            <opm:effect ref="NODE33"/>
+            <opm:role value="removed"/>
+            <opm:cause ref="NODE18"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE41">
+            <opm:effect ref="NODE12"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE28"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE42">
+            <opm:effect ref="NODE42"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE21"/>
+        </opm:used>
+        <opm:used id="EDGE43">
+            <opm:effect ref="NODE42"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE24"/>
+        </opm:used>
+        <opm:wasControlledBy id="EDGE44">
+            <opm:effect ref="NODE43"/>
+            <opm:role value="http://openprovenance.org/role#undefined"/>
+            <opm:cause ref="NODE32"/>
+        </opm:wasControlledBy>
+        <opm:used id="EDGE45">
+            <opm:effect ref="NODE8"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE33"/>
+        </opm:used>
+        <opm:used id="EDGE46">
+            <opm:effect ref="NODE4"/>
+            <opm:role value="start"/>
+            <opm:cause ref="NODE9"/>
+        </opm:used>
+        <opm:wasControlledBy id="EDGE37">
+            <opm:effect ref="NODE7"/>
+            <opm:role value="http://openprovenance.org/role#undefined"/>
+            <opm:cause ref="NODE6"/>
+        </opm:wasControlledBy>
+        <opm:used id="EDGE36">
+            <opm:effect ref="NODE31"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE29"/>
+        </opm:used>
+        <opm:used id="EDGE39">
+            <opm:effect ref="NODE18"/>
+            <opm:role value="removedFrom"/>
+            <opm:cause ref="NODE2"/>
+        </opm:used>
+        <opm:wasControlledBy id="EDGE38">
+            <opm:effect ref="NODE18"/>
+            <opm:role value="http://openprovenance.org/role#undefined"/>
+            <opm:cause ref="NODE41"/>
+        </opm:wasControlledBy>
+        <opm:wasControlledBy id="EDGE30">
+            <opm:effect ref="NODE28"/>
+            <opm:role value="http://openprovenance.org/role#undefined"/>
+            <opm:cause ref="NODE26"/>
+        </opm:wasControlledBy>
+        <opm:wasGeneratedBy id="EDGE31">
+            <opm:effect ref="NODE15"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE42"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE34">
+            <opm:effect ref="NODE39"/>
+            <opm:role value="copy"/>
+            <opm:cause ref="NODE43"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE35">
+            <opm:effect ref="NODE2"/>
+            <opm:role value="end"/>
+            <opm:cause ref="NODE4"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE32">
+            <opm:effect ref="NODE34"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE8"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE33">
+            <opm:effect ref="NODE8"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE19"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE28">
+            <opm:effect ref="NODE0"/>
+            <opm:role value="remained"/>
+            <opm:cause ref="NODE18"/>
+        </opm:wasGeneratedBy>
+        <opm:wasControlledBy id="EDGE27">
+            <opm:effect ref="NODE14"/>
+            <opm:role value="http://openprovenance.org/role#undefined"/>
+            <opm:cause ref="NODE1"/>
+        </opm:wasControlledBy>
+        <opm:wasGeneratedBy id="EDGE26">
+            <opm:effect ref="NODE25"/>
+            <opm:role value="written"/>
+            <opm:cause ref="NODE7"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE25">
+            <opm:effect ref="NODE17"/>
+            <opm:role value="part"/>
+            <opm:cause ref="NODE25"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE29">
+            <opm:effect ref="NODE9"/>
+            <opm:role value="result"/>
+            <opm:cause ref="NODE17"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE21">
+            <opm:effect ref="NODE28"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE5"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE22">
+            <opm:effect ref="NODE24"/>
+            <opm:role value="copy"/>
+            <opm:cause ref="NODE43"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE23">
+            <opm:effect ref="NODE22"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE3"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE24">
+            <opm:effect ref="NODE35"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE8"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE20">
+            <opm:effect ref="NODE36"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE34"/>
+        </opm:used>
+        <opm:used id="EDGE19">
+            <opm:effect ref="NODE11"/>
+            <opm:role value="burnt"/>
+            <opm:cause ref="NODE38"/>
+        </opm:used>
+        <opm:used id="EDGE18">
+            <opm:effect ref="NODE17"/>
+            <opm:role value="part"/>
+            <opm:cause ref="NODE37"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE15">
+            <opm:effect ref="NODE40"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE42"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE14">
+            <opm:effect ref="NODE10"/>
+            <opm:role value="written"/>
+            <opm:cause ref="NODE7"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE17">
+            <opm:effect ref="NODE37"/>
+            <opm:role value="written"/>
+            <opm:cause ref="NODE7"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE16">
+            <opm:effect ref="NODE29"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE36"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE12">
+            <opm:effect ref="NODE27"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE42"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE13">
+            <opm:effect ref="NODE21"/>
+            <opm:role value="copy"/>
+            <opm:cause ref="NODE43"/>
+        </opm:wasGeneratedBy>
+        <opm:wasGeneratedBy id="EDGE10">
+            <opm:effect ref="NODE38"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE31"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE11">
+            <opm:effect ref="NODE16"/>
+            <opm:role value="original"/>
+            <opm:cause ref="NODE2"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE47">
+            <opm:effect ref="NODE5"/>
+            <opm:role value="identified"/>
+            <opm:cause ref="NODE20"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE48">
+            <opm:effect ref="NODE43"/>
+            <opm:role value="original"/>
+            <opm:cause ref="NODE29"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE9">
+            <opm:effect ref="NODE3"/>
+            <opm:role value="photograph"/>
+            <opm:cause ref="NODE23"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE5">
+            <opm:effect ref="NODE23"/>
+            <opm:role value="original"/>
+            <opm:cause ref="NODE12"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE6">
+            <opm:effect ref="NODE30"/>
+            <opm:role value="atEnd"/>
+            <opm:cause ref="NODE22"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE7">
+            <opm:effect ref="NODE20"/>
+            <opm:role value="unidentified"/>
+            <opm:cause ref="NODE35"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE8">
+            <opm:effect ref="NODE19"/>
+            <opm:role value="copy"/>
+            <opm:cause ref="NODE16"/>
+        </opm:wasGeneratedBy>
+        <opm:used id="EDGE1">
+            <opm:effect ref="NODE14"/>
+            <opm:role value="part"/>
+            <opm:cause ref="NODE9"/>
+        </opm:used>
+        <opm:used id="EDGE2">
+            <opm:effect ref="NODE17"/>
+            <opm:role value="part"/>
+            <opm:cause ref="NODE10"/>
+        </opm:used>
+        <opm:wasGeneratedBy id="EDGE3">
+            <opm:effect ref="NODE13"/>
+            <opm:role value="result"/>
+            <opm:cause ref="NODE14"/>
+        </opm:wasGeneratedBy>
+        <opm:wasControlledBy id="EDGE4">
+            <opm:effect ref="NODE16"/>
+            <opm:role value="http://openprovenance.org/role#undefined"/>
+            <opm:cause ref="NODE41"/>
+        </opm:wasControlledBy>
+        <opm:used id="EDGE0">
+            <opm:effect ref="NODE42"/>
+            <opm:role value="atStart"/>
+            <opm:cause ref="NODE39"/>
+        </opm:used>
+    </opm:causalDependencies>
+    <opm:annotations>
+        <opm:annotation id="ANN0forNODE3">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Photograph of Kringla leaf</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE3</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE2">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"University Library, Copenhagen"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE2</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE2">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE2</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN2forNODE5">
+            <opm:property uri="known">
+                <opm:value xsi:type="xsd:string">"Leaf from Kringla manuscript"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE5</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE5">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Identified Kringla leaf</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE5</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE7">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Iceland"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE7</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE7">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"circa 1225"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE7</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE7">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">wrote</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE7</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE10">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Saga A</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE10</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN4forNODE13">
+            <opm:property uri="edition">
+                <opm:value xsi:type="xsd:string">"1st"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE13</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE13">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla heimsins</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE13</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE12">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Icelandic National Library, Iceland"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE12</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN5forNODE12">
+            <opm:property uri="owner">
+                <opm:value xsi:type="xsd:string">"Iceland"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE12</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN6forNODE12">
+            <opm:property uri="identifier">
+                <opm:value xsi:type="xsd:string">"Lbs. fragm. 82"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE12</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE12">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla leaf in Iceland</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE12</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE16">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">copied</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE16</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE15">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Arnemagnean, Copenhagen"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE15</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE15">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla copy AM 63 in Arnemagnean</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE15</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE18">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">removed</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE18</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE22">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">sent</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE22</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE21">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla copy AM 35</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE21</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE23">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"between 2000 and 2008"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE23</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE23">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">photographed</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE23</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE24">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla copy AM 36</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE24</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN7forNODE26">
+            <opm:property uri="name">
+                <opm:value xsi:type="xsd:string">"Karl Gustav"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE26</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN8forNODE26">
+            <opm:property uri="job">
+                <opm:value xsi:type="xsd:string">"King of Sweden"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE26</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE26">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Gustav</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE26</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE29">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Karmoy, Norway"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE29</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN5forNODE29">
+            <opm:property uri="owner">
+                <opm:value xsi:type="xsd:string">"Tormod Torfaeus"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE29</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE29">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript copy in Karmoy</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE29</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN9forNODE30">
+            <opm:property uri="repository">
+                <opm:value xsi:type="xsd:string">"Europeana"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE30</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN10forNODE30">
+            <opm:property uri="dc:creator">
+                <opm:value xsi:type="xsd:string">"Snorri Sturluson"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE30</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE30">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Photograph at EDL</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE30</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE31">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"beginning of 18th Century"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE31</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE31">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">sent</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE31</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN7forNODE32">
+            <opm:property uri="name">
+                <opm:value xsi:type="xsd:string">"Asgeir Jonsson"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE32</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN8forNODE32">
+            <opm:property uri="job">
+                <opm:value xsi:type="xsd:string">"assistant to Tormod Torfaeus"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE32</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE32">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Jonsson</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE32</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE33">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript folio</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE33</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE34">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Royal Library, Stockholm"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE34</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE34">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript copy in Stockholm</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE34</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE35">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Royal Library, Stockholm"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE35</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE35">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript folio in Stockholm</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE35</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE36">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">sent</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE36</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE39">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla copy AM 63</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE39</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE42">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">sent</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE42</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE0">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript with folio removed</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE0</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN11forNODE1">
+            <opm:property uri="vocation">
+                <opm:value xsi:type="xsd:string">"priest"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE1</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN7forNODE1">
+            <opm:property uri="name">
+                <opm:value xsi:type="xsd:string">"Peder Clausson Friis"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE1</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE1">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Friis</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE1</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE4">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"around 1600"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE4</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE4">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">moved</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE4</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN12forNODE6">
+            <opm:property uri="born">
+                <opm:value xsi:type="xsd:string">"1179"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE6</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN11forNODE6">
+            <opm:property uri="vocation">
+                <opm:value xsi:type="xsd:string">"politician, poet, historian"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE6</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN13forNODE6">
+            <opm:property uri="died">
+                <opm:value xsi:type="xsd:string">"1242"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE6</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN7forNODE6">
+            <opm:property uri="name">
+                <opm:value xsi:type="xsd:string">"Snorri Sturluson"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE6</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE6">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Sturluson</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE6</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE8">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">sent</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE8</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE9">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Bergen, Norway"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE9</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE9">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE9</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN14forNODE11">
+            <opm:property uri="event">
+                <opm:value xsi:type="xsd:string">"Great fire of Copenhagen"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE11</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE11">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"1728"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE11</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE11">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">burnt</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE11</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE14">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"1530"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE14</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE14">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">collated</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE14</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN3forNODE17">
+            <opm:property uri="date">
+                <opm:value xsi:type="xsd:string">"1260"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE17</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE17">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">collated</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE17</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE19">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript copy</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE19</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE20">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">identified</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE20</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE25">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Saga B</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE25</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE27">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla copy AM 35 in Arnemagnean</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE27</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE28">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">given</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE28</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE37">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Saga Z</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE37</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE38">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Copenhagen"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE38</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE38">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla manuscript copy back in Copenhagen</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE38</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN12forNODE41">
+            <opm:property uri="born">
+                <opm:value xsi:type="xsd:string">"1643"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN11forNODE41">
+            <opm:property uri="vocation">
+                <opm:value xsi:type="xsd:string">"illicit trader in Medieval Icelandic manuscripts"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN15forNODE41">
+            <opm:property uri="nationality">
+                <opm:value xsi:type="xsd:string">"Icelandic"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN13forNODE41">
+            <opm:property uri="died">
+                <opm:value xsi:type="xsd:string">"1689"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN1forNODE41">
+            <opm:property uri="location">
+                <opm:value xsi:type="xsd:string">"Debt Prison, Copenhangen"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN7forNODE41">
+            <opm:property uri="name">
+                <opm:value xsi:type="xsd:string">"Jon Eggertsson"</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE41">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Eggertsson</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE41</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE40">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">Kringla copy AM 36 in Arnemagnean</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE40</opm:localSubject>
+        </opm:annotation>
+        <opm:annotation id="ANN0forNODE43">
+            <opm:property uri="http://openprovenance.org/property#label">
+                <opm:value xsi:type="xsd:string">copied</opm:value>
+            </opm:property>
+            <opm:localSubject>NODE43</opm:localSubject>
+        </opm:annotation>
+    </opm:annotations>
+</opm:opmGraph>
