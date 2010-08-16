@@ -80,11 +80,20 @@
         </p>
 	<h2>Accounts</h2>
 	<p>
-	    Accounts can be represented in POEM by putting curly braces around a set of in-out assertions as shown below.
+	    Accounts can be represented in POEM by putting curly braces around a set of in-out assertions 
+	    as shown below. Accounts may be nested within other accounts, this is simply done by adding another 
+	    set of curly braces within another set. This is demonstrated below.
 
-            <blockquote>{<br/>(written article)<br/>
-            &nbsp;&nbsp;+ title = "The POEM Format for OPM"<br/>
-            &nbsp;&nbsp;+ length = "2 pages"<br/>}</blockquote>
+            <blockquote>{&lt;Simon&gt;<br/>
+            (writtenOn "sheets of paper")<br/>
+            &nbsp;&nbsp;[wrote]<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;(written article).<br />
+	    <br />
+	    {
+	    (writtenOn "sheets of paper")<br/>
+            &nbsp;&nbsp;[$wasDeriviedfrom$]<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;(written article).}}</blockquote>
+
         <h2>References</h2>
 	</p>
         <p>
