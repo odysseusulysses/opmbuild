@@ -27,6 +27,6 @@ public abstract class TimeAnnotatedEdge extends Edge {
     }
 
     public void setTime (Time time) {
-        setTime (time);
+        _time = time;
     }
 }
