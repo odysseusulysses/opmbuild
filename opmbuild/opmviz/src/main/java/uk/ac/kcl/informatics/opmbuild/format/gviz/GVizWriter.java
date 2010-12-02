@@ -166,14 +166,11 @@ public class GVizWriter {
 		String label;
 		if(Retrieve.getValueByKey (node, OPMAnnotations.LABEL) == null)
 		{
-			System.out.println("Node with null label = " + node);
 			label = "";
 		}
 		else
 		{
         	label = Retrieve.getValueByKey (node, OPMAnnotations.LABEL).toString ();
-			System.out.println(node);
-			System.out.println("Label retrieved " + label);
 		}
 
         if (_numberEntities) {
