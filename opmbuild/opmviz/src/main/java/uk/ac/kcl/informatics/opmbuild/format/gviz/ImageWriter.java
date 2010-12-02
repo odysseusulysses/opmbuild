@@ -53,7 +53,6 @@ public class ImageWriter {
         try {
             String in = gviz.getAbsolutePath ();
             String out = _output.getAbsolutePath ();
-            String command = getCommand (false).getAbsolutePath ();
             String command = null;
             if(System.getProperty("os.name").startsWith("Win"))
                 command = quoted(command);
