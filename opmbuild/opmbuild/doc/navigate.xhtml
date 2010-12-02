@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Navigating In-Memory Graphs</title>
+    </head>
+    <body>
+        <h1>Navigating In-Memory Graphs</h1>
+        <p>
+            For simple retrieval tasks on in-memory graphs, full-blown querying of an OPM graph may be too
+            complex.  To keep the object model APIs relatively simple, we do not add all operations
+            to them, but provide separate utility classes containing basic navigation and manipulation methods.
+            This includes a set of operations which are commonly required when serialising or deserialising graphs.
+        </p>
+        <p>
+            Many of these operations are provided as static methods of the Retrieve class.
+            Below, the kinds of navigation which can be performed.
+        </p>
+
+        <h2>Using the Collection APIs</h2>
+        <p>
+            We make use of the Java Collection APIs as far as possible for any collection of entities
+            in the object model, allowing these standard APIs (and associated utility classes such as
+            Collections), to be used.  In particular, an Account is a Set of GraphElements,
+            a Graph is a Collection of Accounts, and every annotated entity has a Set of Annotations.
+        </p>
+        <p>
+            It is sometimes helpful to manipulate <i>all</i> the elements of a graph regardless of
+            which account they are in.  For this, Graph provides a getAllElements method.
+            <blockquote>Set&lt;GraphElement&gt; all = g.getAllElements ();</blockquote>
+            The elements returned will include cause and effect nodes of edges, even if these
+            have themselves never been explicitly added to (any account in) the graph.
+        </p>
+
+        <h2>Searching Graphs</h2>
+        <p>
+            A few methods of the Retrieve class provide ways to search in-memory graphs for data connected in basic ways.
+            Note that some take a Collection of GraphElements rather than a graph, where the account information
+            is unimportant.  An Account is a Collection of GraphElements, so can be passed to these methods, as
+            can the results of calling getAllElements on a Graph.
+            <ul>
+                <li><b>getAccountsContaining(g, n)</b>: Returns all accounts in Graph g containing the Node n.</li>
+                <li><b>getCauses(e)</b>: Returns all nodes in Collection of GraphElements e which are the cause in some edge.</li>
+                <li><b>getEdges(e)</b>: Returns all the edges in Collection of GraphElements e.</li>
+                <li><b>getEffects(e)</b>: Returns all nodes in Collection of GraphElements e which are the effect in some edge.</li>
+                <li><b>getNodes(e)</b>: Returns all the nodes in Collection of GraphElements e.</li>
+            </ul>
+        </p>
+
+        <h2>Searching Annotations</h2>
+        <p>
+            Annotation produces a relatively complex data structure to navigate: entities have collections of
+            annotations, each of which consist of a key and a value. This makes it cumbersome to search for
+            particular annotations.  The Retrieve class provides a set of methods to help.
+            <ul>
+                <li><b>getAnnotationByKey(a, k)</b>: Returns the annotation of Annotated entity a which has key k.</li>
+                <li><b>getAnnotationsByKey(a, k)</b>: Returns all annotations of Annotated entity a which have key k.</li>
+                <li><b>getValues(c)</b>: Returns all the values of the annotations in Collection of Annotations c.</li>
+                <li><b>getValueByKey(a, k)</b>: Returns the value of the annotation of Annotated entity a which has key k.</li>
+                <li><b>getValuesByKey(a, k)</b>: Returns the values of all annotations of Annotated entity a which have key k.</li>
+                <li><b>hasAnnotation(a, k, v)</b>: Tests whether Annotated entity a has an annotation with key k and value v.</li>
+                <li><b>removeAnnotationsByKey(a, k)</b>: Removes from Annotated entity a all annotations with key k.</li>
+            </ul>
+        </p>
+    </body>
+</html>
