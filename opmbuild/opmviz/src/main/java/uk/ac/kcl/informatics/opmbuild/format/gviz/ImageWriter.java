@@ -54,7 +54,14 @@ public class ImageWriter {
             String in = gviz.getAbsolutePath ();
             String out = _output.getAbsolutePath ();
             String command = getCommand (false).getAbsolutePath ();
-            ProcessBuilder builder = new ProcessBuilder (quoted (command), "-T" + _format, quoted ("-o" + out), quoted (in));
+            String command = null;
+            if(System.getProperty("os.name").startsWith("Win"))
+                command = quoted(command);
+            else command = getCommand (false).getAbsolutePath ();
+                      
+
+            ProcessBuilder builder = new ProcessBuilder (command, "-T" + _format, quoted ("-o" + out), quoted (in));
+            
             Process process = builder.start ();
             process.waitFor ();
         } catch (InterruptedException ex) {
