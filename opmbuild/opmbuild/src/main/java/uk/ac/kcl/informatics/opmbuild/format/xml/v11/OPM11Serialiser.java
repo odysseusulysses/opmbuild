@@ -1,11 +1,8 @@
 package uk.ac.kcl.informatics.opmbuild.format.xml.v11;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.io.Writer;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -38,9 +35,10 @@ import uk.ac.kcl.informatics.opmbuild.GraphElement;
 import uk.ac.kcl.informatics.opmbuild.Node;
 import uk.ac.kcl.informatics.opmbuild.Retrieve;
 import uk.ac.kcl.informatics.opmbuild.RoleAnnotatedEdge;
+import uk.ac.kcl.informatics.opmbuild.format.CommonSerialiser;
 import uk.ac.kcl.informatics.opmbuild.format.GraphSerialisationIDs;
 
-public class OPMV11Serialiser {
+public class OPM11Serialiser extends CommonSerialiser {
 
     private OPMSerialiser _writer;
     private OPMFactory _factory;
@@ -48,7 +46,7 @@ public class OPMV11Serialiser {
     /** The value used for undefined roles */
     public static final String UNDEFINED = "http://openprovenance.org/role#undefined";
 
-    public OPMV11Serialiser (ValueSerialiser values) throws IOException {
+    public OPM11Serialiser (ValueSerialiser values) throws IOException {
         try {
             _writer = new OPMSerialiser ();
             _factory = new OPMFactory ();
@@ -58,11 +56,11 @@ public class OPMV11Serialiser {
         }
     }
 
-    public OPMV11Serialiser () throws IOException {
+    public OPM11Serialiser () throws IOException {
         this (new DefaultValueSerialiser ());
     }
 
-    public void write (Graph graph, Writer out, boolean format) throws IOException {
+    public void write (Graph graph, PrintWriter out, boolean format) throws IOException {
         try {
             StringWriter buffered = new StringWriter ();
 
@@ -71,12 +69,6 @@ public class OPMV11Serialiser {
         } catch (JAXBException ex) {
             throw new IOException (ex);
         }
-    }
-
-    public void write (Graph graph, File out, boolean format) throws IOException {
-        BufferedWriter writer = new BufferedWriter (new FileWriter (out));
-        write (graph, writer, format);
-        writer.close ();
     }
 
     public OPMGraph convert (Graph graph) {
