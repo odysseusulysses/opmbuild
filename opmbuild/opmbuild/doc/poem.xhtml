@@ -3,122 +3,155 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
         <title>The POEM Format for OPM</title>
     </head>
     <body>
-        <h1>The POEM Format for OPM</h1>
-        <p>
-            POEM is a text-based data format for OPM graphs which aims to be easy and succinct to write
-            by hand.  It is particularly intended for creating graphs to test software tools
-            with, or to generate examples and illustrations.  POEM does not attempt to allow everything
-            expressible by the OPM specification to be expressed, just some common usages.
-            At the moment it is fairly limited, though we intend it to become more expressive over time.
-            OPM Builder provides a deserialiser for POEM.  Below, we explain how to construct a POEM file.
-        </p>
-        <p>
-            A large POEM example can be seen <a href="../ext/kringla.poem">here</a> and a graphical depiction
-            generated from the example is available <a href="../ext/kringla.pdf">here</a>.
-            A converter is provided for compiling POEM files to GraphViz graphs.
-            The class is org.opmbuild.tools.PoemToGViz - run without arguments to see the
-            range of arguments it takes.
-        </p>
-        <h2>Processes</h2>
-        <p>
-            Nodes (artifacts, processes and agents) are denoted in POEM by different styles
-            of bracket.  With square brackets, we denote a process.  The text within
-            the brackets is the label of that process (i.e. the value of
-            an opm:label annotation).  If the label is more than a single identifier (sequence of
-            digits and/or letters), then it should be given in quotes.
-            <blockquote>[wrote]<br/>
-            ["ran on cluster"]</blockquote>
-        </p>
-        <h2>Agents</h2>
-        <p>
-            Agents are represented in the same way as processes except using
-            angle instead of square brackets.
-            <blockquote>&lt;Simon&gt;<br/>
-            &lt;"Simon Miles"&gt;</blockquote>
-        </p>
-        <h2>Artifacts</h2>
-        <p>
-            Artifacts in POEM are (currently) always in the context of a used or wasGeneratedBy edge,
-            and therefore has a role in the related process.
-            An artifact is denoted by round parentheses containing two elements, separated by
-            a space: the role name and then the artifact label (either an identifier or quoted string as for processes).
-            <blockquote>(written article)<br/>
-            (writtenOn "sheets of paper")</blockquote>
-        </p>
-        <h2>Edges</h2>
-        <p>
-            POEM allows used, wasGeneratedBy, wasControlledBy and wasDervivedFrom edges to be expressed.
-            A POEM file is a series of <i>in-out assertions</i>, each describing one process, including
-            what artifacts it used and generated and what agents controlled it.
-            An in-out assertion starts by listing the artifacts used and agents controlling the process,
-            followed by the process itself, then the artifacts it generates, terminating with a full stop/period.
-            It may be helpful to use indentation to distinguish the used from the generated artifacts.
-            <blockquote>&lt;Simon&gt;<br/>
-            (writtenOn "sheets of paper")<br/>
-            &nbsp;&nbsp;[wrote]<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;(written article).</blockquote>
-            There can be as many artifacts or agents as is desired, but only one process.<br/>
-	    To represent wasDerivedFrom edges we write it in the same form except the process inbetween
-	    must have a specific label as shown below.
-	    <blockquote>
-            (writtenOn "sheets of paper")<br/>
-            &nbsp;&nbsp;[$wasDeriviedfrom$]<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;(written article).</blockquote>
-	
-        </p>
-        <h2>Annotations</h2>
-        <p>
-            Nodes (artifacts, processes, agents) can be annotated.
-            An annotation is denoted by a plus, the annotation key, an equals, and the value in quotes.
-            The annotations of a node immediately follow that node, and are of any number.
-            <blockquote>(written article)<br/>
-            &nbsp;&nbsp;+ title = "The POEM Format for OPM"<br/>
-            &nbsp;&nbsp;+ length = "2 pages"</blockquote>
-        </p>
-	<h2>Accounts</h2>
-	<p>
-	    Accounts can be represented in POEM by putting curly braces around a set of in-out assertions 
-	    as shown below. Accounts may be nested within other accounts, this is simply done by adding another 
-	    set of curly braces within another set. This is demonstrated below.
+        <div id="wrapper">
+            <div id="header">POEM Format</div>
+            <ul id="nav">
+                <li><a href="index.xhtml">Introduction</a></li>
+                <li><a href="install.xhtml">Installation</a></li>
+                <li><a href="manual.xhtml">Manual</a></li>
+                <li><a href="examples.xhtml">Examples</a></li>
+                <li><a href="apidocs/index.html">JavaDoc</a></li>
+            </ul>
+            <div id="content" class="clearfix">
+                <div id="col_1">
+                    <h2>User Manual</h2>
+                    <ul id="subnav">
+                        <li><a href = "manual.xhtml">Table of Contents</a></li>
+                        <li><a href = "model.xhtml">Object Model</a></li>
+                        <li><a href = "build.xhtml">Building</a></li>
+                        <li><a href = "navigate.xhtml">Navigating</a></li>
+                        <li><a href = "query.xhtml">Querying</a></li>
+                        <li><a href = "poem.xhtml">POEM Format</a></li>
+                        <li><a href = "xml.xhtml">XML Serialisation</a></li>
+                        <li><a href = "dc.xhtml">Dublin Core Conversion</a></li>
+                        <li><a href = "ss.xhtml">SourceSource</a></li>
+                    </ul>
+                </div>
+                <div id="col_2">
+                    <h1>The POEM Format for OPM</h1>
+                    <p>
+                        POEM is a text-based data format for OPM graphs which aims to be easy and succinct to write
+                        by hand.  It is particularly intended for creating graphs to test software tools
+                        with, or to generate examples and illustrations.  POEM does not attempt to allow everything
+                        expressible by the OPM specification to be expressed, just some common usages.
+                        At the moment it is fairly limited, though we intend it to become more expressive over time.
+                        OPM Builder provides a deserialiser for POEM.  Below, we explain how to construct a POEM file.
+                    </p>
+                    <p>
+                        A large POEM example can be seen <a href="../ext/kringla.poem">here</a> and a graphical depiction
+                        generated from the example is available <a href="../ext/kringla.pdf">here</a>.
+                        A converter is provided for compiling POEM files to GraphViz graphs.
+                        The class is org.opmbuild.tools.PoemToGViz - run without arguments to see the
+                        range of arguments it takes.
+                    </p>
+                    <h2>Processes</h2>
+                    <p>
+                        Nodes (artifacts, processes and agents) are denoted in POEM by different styles
+                        of bracket.  With square brackets, we denote a process.  The text within
+                        the brackets is the label of that process (i.e. the value of
+                        an opm:label annotation).  If the label is more than a single identifier (sequence of
+                        digits and/or letters), then it should be given in quotes.
+                        <blockquote>[wrote]<br/>
+                            ["ran on cluster"]</blockquote>
+                    </p>
+                    <h2>Agents</h2>
+                    <p>
+                        Agents are represented in the same way as processes except using
+                        angle instead of square brackets.
+                        <blockquote>&lt;Simon&gt;<br/>
+                            &lt;"Simon Miles"&gt;</blockquote>
+                    </p>
+                    <h2>Artifacts</h2>
+                    <p>
+                        Artifacts in POEM are (currently) always in the context of a used or wasGeneratedBy edge,
+                        and therefore has a role in the related process.
+                        An artifact is denoted by round parentheses containing two elements, separated by
+                        a space: the role name and then the artifact label (either an identifier or quoted string as for processes).
+                        <blockquote>(written article)<br/>
+                            (writtenOn "sheets of paper")</blockquote>
+                    </p>
+                    <h2>Edges</h2>
+                    <p>
+                        POEM allows used, wasGeneratedBy, wasControlledBy and wasDerivedFrom edges to be expressed.
+                        A POEM file is a series of <i>in-out assertions</i>, each describing one process, including
+                        what artifacts it used and generated and what agents controlled it.
+                        An in-out assertion starts by listing the artifacts used and agents controlling the process,
+                        followed by the process itself, then the artifacts it generates, terminating with a full stop/period.
+                        It may be helpful to use indentation to distinguish the used from the generated artifacts.
+                        <blockquote>&lt;Simon&gt;<br/>
+                            (writtenOn "sheets of paper")<br/>
+                            &nbsp;&nbsp;[wrote]<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(written article).</blockquote>
+                        There can be as many artifacts or agents as is desired, but only one process.
+                    </p>
+                    <p>
+                        To represent wasDerivedFrom edges we write it in the same form except the process inbetween
+                        must have a specific label as shown below.
+                        <blockquote>
+                            (writtenOn "sheets of paper")<br/>
+                            &nbsp;&nbsp;[$wasDerivedFrom$]<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(written article).
+                        </blockquote>
+                    </p>
+                    <h2>Annotations</h2>
+                    <p>
+                        Nodes (artifacts, processes, agents) can be annotated.
+                        An annotation is denoted by a plus, the annotation key, an equals, and the value in quotes.
+                        The annotations of a node immediately follow that node, and are of any number.
+                        <blockquote>(written article)<br/>
+                            &nbsp;&nbsp;+ title = "The POEM Format for OPM"<br/>
+                            &nbsp;&nbsp;+ length = "2 pages"</blockquote>
+                    </p>
+                    <h2>Accounts</h2>
+                    <p>
+                        Accounts can be represented in POEM by putting curly braces around a set of in-out assertions
+                        as shown below. Accounts may be nested within other accounts, this is simply done by adding another
+                        set of curly braces within another set. This is demonstrated below.
 
-            <blockquote>{&lt;Simon&gt;<br/>
-            (writtenOn "sheets of paper")<br/>
-            &nbsp;&nbsp;[wrote]<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;(written article).<br />
-	    <br />
-	    {
-	    (writtenOn "sheets of paper")<br/>
-            &nbsp;&nbsp;[$wasDeriviedfrom$]<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;(written article).}}</blockquote>
+                        <blockquote>{&lt;Simon&gt;<br/>
+                            (writtenOn "sheets of paper")<br/>
+                            &nbsp;&nbsp;[wrote]<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(written article).<br />
+                            <br />
+                            {
+                            (writtenOn "sheets of paper")<br/>
+                            &nbsp;&nbsp;[$wasDerivedFrom$]<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(written article).}}</blockquote>
+                    </p>
+                    <h2>References</h2>
+                    <p>
+                        Following the above, an OPM graph of any size can be represented.
+                        However, it would be largely disconnected: the artifacts and agents
+                        are unique to each in-out assertion.
+                        To connect up in-out assertions, so that, for example, an artifact can be generated by
+                        one process can then be used by another, we use <i>references</i>.
+                        These are not part of OPM, but simply part of the POEM serialisation.
+                    </p>
+                    <p>
+                        A POEM reference is denoted by a star followed by an identifier.
+                        When a reference is placed immediately following an artifact or agent, that artifact or
+                        agent can then be referred to in in-out assertions later in the file.
+                        To say that an artifact/agent in an in-out assertion is the same as a node
+                        in a previous in-out assertion, replace that node's label with the reference.
+                        <blockquote>&lt;Simon&gt;*1<br/>
+                            (writtenOn "sheets of paper")<br/>
+                            &nbsp;&nbsp;[wrote]<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(written article)*2.<br/>
+                            <br/>
+                            &lt;*1&gt;<br/>
+                            (beforePublishing *2)<br/>
+                            &nbsp;&nbsp;[published]<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;(afterPublishing "article in publication").</blockquote>
+                    </p>
+                </div>
+            </div>
+            <div id="footer"><small>
+                    Layout by <a href="http://www.free-css.com/" target="_blank">Free CSS.com</a></small></div>
+        </div>
 
-        <h2>References</h2>
-	</p>
-        <p>
-            Following the above, an OPM graph of any size can be represented.
-            However, it would be largely disconnected: the artifacts and agents
-            are unique to each in-out assertion.
-            To connect up in-out assertions, so that, for example, an artifact can be generated by
-            one process can then be used by another, we use <i>references</i>.
-            These are not part of OPM, but simply part of the POEM serialisation.
-        </p>
-        <p>
-            A POEM reference is denoted by a star followed by an identifier.
-            When a reference is placed immediately following an artifact or agent, that artifact or
-            agent can then be referred to in in-out assertions later in the file.
-            To say that an artifact/agent in an in-out assertion is the same as a node
-            in a previous in-out assertion, replace that node's label with the reference.
-            <blockquote>&lt;Simon&gt;*1<br/>
-            (writtenOn "sheets of paper")<br/>
-            &nbsp;&nbsp;[wrote]<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;(written article)*2.<br/>
-            <br/>
-            &lt;*1&gt;<br/>
-            (beforePublishing *2)<br/>
-            &nbsp;&nbsp;[published]<br/>
-            &nbsp;&nbsp;&nbsp;&nbsp;(afterPublishing "article in publication").</blockquote>
-        </p>
     </body>
 </html>

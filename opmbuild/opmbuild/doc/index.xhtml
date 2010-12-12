@@ -10,51 +10,32 @@
         <div id="wrapper">
             <div id="header">OPM Builder</div>
             <ul id="nav">
-                <li><a href=".">Introduction</a></li>
-                <li><a href=".">Installation</a></li>
-                <li><a href=".">Manual</a></li>
-                <li><a href=".">JavaDoc</a></li>
-                <li><a href=".">Examples</a></li>
+                <li><a href="index.xhtml">Introduction</a></li>
+                <li><a href="install.xhtml">Installation</a></li>
+                <li><a href="manual.xhtml">Manual</a></li>
+                <li><a href="examples.xhtml">Examples</a></li>
+                <li><a href="apidocs/index.html">JavaDoc</a></li>
             </ul>
             <div id="content" class="clearfix">
                 <div id="col_1">
-                    <h2>Information</h2>
+                    <h2>Introduction</h2>
                     <ul id="subnav">
-                        <li><a href = "model.xhtml">Object Model</a></li>
-                        <li><a href = "build.xhtml">Building</a></li>
-                        <li><a href = "navigate.xhtml">Navigating</a></li>
-                        <li><a href = "query.xhtml">Querying</a></li>
-                        <li><a href = "poem.xhtml">POEM Format</a></li>
-                        <li><a href = "xml.xhtml">XML Serialisation</a></li>
-                        <li><a href = "dc.xhtml">Dublin Core Conversion</a></li>
-                        <li><a href = "ss.xhtml">SourceSource</a></li>
+                        <li><a href = "index.xhtml">Summary</a></li>
+                        <li><a href = "opm-intro.xhtml">OPM</a></li>
                     </ul>
                 </div>
                 <div id="col_2">
                     <h1>OPM Builder</h1>
                     <p>
-                        The goals of OPM Builder are the following.
+                        OPM Builder is a library for creating, manipulating, and navigating OPM graphs within memory in Java programs.
+                        OPM Builder aims to have the following properties.
                         <ul>
-                            <li><i>Convenience</i>: The API aims to be easy to use, in particular by allowing OPM graphs, whether to be stored or communicated, to be built iteratively.</li>
+                            <li><i>Convenience</i>: The API aims to be easy to use, in particular by allowing OPM graphs, whether to be stored or communicated, to be built iteratively.  It further aims for programs written using the API to be easy to understand.</li>
                             <li><i>Constancy</i>: As the OPM model or any particular serialisation of it evolve, the OPM Builder API will not change in ways which break existing programs, but instead add functionality and deprecate obsolete methods or classes before removal.</li>
                             <li><i>Collections-based</i>: The API aims to be familiar to Jave programmers by using the appropriate standard Collection APIs whenever a collection is modelled.</li>
-                            <li><i>Convention</i>: Where a varaiable has an obvious default value, can be auto-generated or retrieved from elsewhere, the API aims to do this instead of requiring the user to provide such data.</li>
-                            <li><i>Conversion</i>: OPM Builder is not tied to a particular serialisation, serialising and deserialising from different formats and, in particular, can be used to convert between two versions of a serialisation (e.g. two versions of the standard XML serialisation).</li>
-                            <li><i>Unordered</i>: OPM Builder aims to be convenient by being agnostic to the order in which building is done, e.g. construct an empty graph then populate it, or create graph elements then a graph to contain them.</li>
+                            <li><i>Convention</i>: Where a varaiable has an obvious default value, can be auto-generated or retrieved from elsewhere, OPM Builder aims to do this instead of requiring the user to provide such data.</li>
+                            <li><i>Conversion</i>: OPM Builder aims not to be tied to a particular serialisation or version of a seralisation, and to allow serialisation and deserialisation from different formats and conversion between two versions of one format.</li>
                         </ul>
-                    </p>
-                    <h1>Chapters</h1>
-                    <p>
-                        <ol>
-                            <li><a href = "model.xhtml">Object Model</a></li>
-                            <li><a href = "build.xhtml">Building</a></li>
-                            <li><a href = "navigate.xhtml">Navigating</a></li>
-                            <li><a href = "query.xhtml">Querying</a></li>
-                            <li><a href = "poem.xhtml">POEM Format</a></li>
-                            <li><a href = "xml.xhtml">XML Serialisation</a></li>
-                            <li><a href = "dc.xhtml">Dublin Core Conversion</a></li>
-                            <li><a href = "ss.xhtml">SourceSource</a></li>
-                        </ol>
                     </p>
                 </div>
             </div>
