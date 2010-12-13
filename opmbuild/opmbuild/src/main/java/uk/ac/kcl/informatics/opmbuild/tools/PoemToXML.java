@@ -5,7 +5,7 @@ import java.io.IOException;
 import uk.ac.kcl.informatics.opmbuild.Graph;
 import uk.ac.kcl.informatics.opmbuild.format.poem.PoemReadException;
 import uk.ac.kcl.informatics.opmbuild.format.poem.PoemReader;
-import uk.ac.kcl.informatics.opmbuild.format.xml.v11.OPMV11Serialiser;
+import uk.ac.kcl.informatics.opmbuild.format.xml.v11.OPM11Serialiser;
 
 public class PoemToXML {
 
@@ -21,7 +21,7 @@ public class PoemToXML {
 
     public static void run (String poemFile, String outputFile) throws IOException, PoemReadException {
         PoemReader in = new PoemReader ();
-        OPMV11Serialiser writer = new OPMV11Serialiser ();
+        OPM11Serialiser writer = new OPM11Serialiser ();
         Graph graph;
         File out;
 
